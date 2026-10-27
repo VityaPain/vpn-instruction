@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Как подключить VPN</title>
+<style>
+  :root {
+    --bg: #f6f4ee;
+    --card: #ffffff;
+    --text: #1d1d1b;
+    --muted: #5a5a55;
+    --accent: #2e7d32;
+    --accent-dark: #1b5e20;
+    --note-bg: #fff6d6;
+    --note-border: #e0b400;
+    --line: #dcd8cc;
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 20px; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 8px 0 12px; }
+  h2 { font-size: 1.35rem; margin: 0 0 8px; }
+  p { margin: 0 0 12px; }
+  .lead { color: var(--muted); }
+
+  .card {
+    background: var(--card);
+    border: 2px solid var(--line);
+    border-radius: 18px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  .step-head { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 10px; }
+  .num {
+    flex: none;
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700; font-size: 1.4rem;
+    display: grid; place-items: center;
+  }
+  .step-head h2 { margin: 6px 0 0; }
+
+  .shot { display: block; margin: 16px auto 4px; width: 100%; max-width: 300px; border-radius: 16px; border: 2px solid var(--line); }
+  .caption { text-align: center; color: var(--muted); font-size: 0.85rem; margin: 0; }
+
+  .btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 16px 18px;
+    border-radius: 14px;
+    margin: 10px 0;
+  }
+  .btn:hover, .btn:focus-visible { background: var(--accent-dark); }
+  .btn.alt { background: #1d1d1b; }
+  .btn.alt:hover, .btn.alt:focus-visible { background: #000; }
+  .btn small { display: block; font-weight: 400; font-size: 0.8rem; opacity: 0.9; }
+
+  .note {
+    background: var(--note-bg);
+    border-left: 6px solid var(--note-border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin: 14px 0 0;
+  }
+  .ok { background: #e4f4e5; border-left-color: var(--accent); }
+
+  b.k { background: #eef1ea; border-radius: 6px; padding: 1px 7px; white-space: nowrap; }
+  ul { padding-left: 1.2rem; margin: 8px 0 0; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent-dark); }
+  footer { color: var(--muted); font-size: 0.8rem; text-align: center; margin-top: 32px; }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Как подключить VPN<br>пошагово</h1>
+  <p class="lead">Делайте по одному шагу и не торопитесь. Если что-то не получается — напишите или позвоните Вите, он поможет.</p>
+
+  <section class="card">
+    <div class="step-head"><div class="num">1</div><h2>Скачайте приложение</h2></div>
+    <p>Приложение называется <b>INCY</b>. Нажмите на кнопку для вашего телефона:</p>
+    <a class="btn alt" href="https://apps.apple.com/app/incy/id6756943388" target="_blank" rel="noopener">
+      Скачать для iPhone<small>откроется App Store</small>
+    </a>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=llc.itdev.incy" target="_blank" rel="noopener">
+      Скачать для Android<small>откроется Google Play</small>
+    </a>
+    <p>В магазине нажмите <b class="k">Установить</b> (или <b class="k">Загрузить</b>) и дождитесь, пока приложение скачается.</p>
+  </section>
+
+  <section class="card">
+    <div class="step-head"><div class="num">2</div><h2>Запустите приложение</h2></div>
+    <p>Откройте INCY. Если приложение что-то спрашивает — нажимайте <b class="k">Продолжить</b>, пока не увидите такой экран:</p>
+    <img class="shot" src="img/step-1.jpg" alt="Главный экран приложения INCY с большой круглой кнопкой" loading="lazy">
+    <p class="caption">Вот такой экран должен получиться</p>
+  </section>
+
+  <section class="card">
+    <div class="step-head"><div class="num">3</div><h2>Нажмите «+ Добавить»</h2></div>
+    <p>В нижней части экрана найдите кнопку <b class="k">+ Добавить</b> (на картинке показана стрелками) и нажмите на неё.</p>
+    <img class="shot" src="img/step-1b.jpg" alt="Стрелками показана кнопка «+ Добавить» внизу экрана" loading="lazy">
+    <p style="margin-top:16px">После этого снизу появятся поля для ввода, как на этой картинке:</p>
+    <img class="shot" src="img/step-2.jpg" alt="Окно добавления с полем для ссылки" loading="lazy">
+  </section>
+
+  <section class="card">
+    <div class="step-head"><div class="num">4</div><h2>Попросите ссылку у Вити</h2></div>
+    <p>Напишите или позвоните Вите и попросите прислать <b>ссылку для подключения</b>.</p>
+    <p>Дальше возвращайтесь к этой инструкции.</p>
+  </section>
+
+  <section class="card">
+    <div class="step-head"><div class="num">5</div><h2>Вставьте ссылку</h2></div>
+    <p>Когда Витя пришлёт ссылку:</p>
+    <ul>
+      <li>Нажмите на ссылку пальцем и <b>подержите</b>, пока не появится меню.</li>
+      <li>Выберите <b class="k">Копировать</b>.</li>
+      <li>Вернитесь в приложение INCY и нажмите на <b>верхнее поле</b> (на картинке показано стрелками).</li>
+      <li>Нажмите на поле ещё раз и выберите <b class="k">Вставить</b>.</li>
+    </ul>
+    <img class="shot" src="img/step-3.jpg" alt="Стрелками показано поле, куда вставить ссылку" loading="lazy">
+  </section>
+
+  <section class="card">
+    <div class="step-head"><div class="num">6</div><h2>Нажмите зелёную кнопку</h2></div>
+    <p>После вставки ссылки ниже появится <b>зелёная кнопка «Добавить провайдера»</b> (на картинке показана стрелками). Нажмите на неё.</p>
+    <img class="shot" src="img/step-4b.jpg" alt="Стрелками показана зелёная кнопка «Добавить провайдера»" loading="lazy">
+  </section>
+
+  <section class="card">
+    <div class="step-head"><div class="num">7</div><h2>Подождите немного</h2></div>
+    <p>Через несколько секунд на главном экране появится надпись <b>WPN.ME</b>. Должно получиться примерно вот так:</p>
+    <img class="shot" src="img/step-5.jpg" alt="На экране появился провайдер WPN.ME" loading="lazy">
+  </section>
+
+  <section class="card">
+    <div class="step-head"><div class="num">8</div><h2>Откройте список серверов</h2></div>
+    <p>Нажмите на прямоугольник с надписью <b>WPN.ME</b>. Откроется список. В нём будут непонятные слова и флаги — это нормально, не пугайтесь.</p>
+    <img class="shot" src="img/step-6.jpg" alt="Раскрытый список серверов" loading="lazy">
+  </section>
+
+  <section class="card">
+    <div class="step-head"><div class="num">9</div><h2>Выберите «Нидерланды»</h2></div>
+    <p>Листайте список пальцем <b>вверх</b> (вниз по списку), пока не увидите <b>Нидерланды#1, Нидерланды#2, Нидерланды#3</b>.</p>
+    <p>Нажмите на <b>любой из трёх</b>. Выбранный сервер подсветится.</p>
+    <img class="shot" src="img/step-7.jpg" alt="Список серверов, выбран Нидерланды#2" loading="lazy">
+    <p class="caption">Здесь выбраны «Нидерланды#2»</p>
+  </section>
+
+  <section class="card">
+    <div class="step-head"><div class="num">10</div><h2>Включите VPN</h2></div>
+    <p>Нажмите на <b>большую круглую кнопку</b> вверху экрана. Через несколько секунд она загорится зелёным и появится <b>салатовый щит</b>.</p>
+    <img class="shot" src="img/step-8.jpg" alt="VPN включён: салатовый щит в круглой кнопке" loading="lazy">
+    <div class="note ok"><b>Готово!</b> Теперь можно пользоваться Телеграмом, Инстаграмом и другими приложениями.</div>
+  </section>
+
+  <section class="card">
+    <h2>Как выключить VPN</h2>
+    <p>Нажмите на <b>большую круглую кнопку</b> ещё раз.</p>
+    <h2 style="margin-top:18px">Как включить в следующий раз</h2>
+    <p>Настраивать заново <b>не нужно</b>. Просто откройте приложение INCY и нажмите на большую круглую кнопку.</p>
+  </section>
+
+  <section class="card">
+    <h2>Если плохо работает</h2>
+    <p>Вернитесь к шагу 9 и выберите <b>другой сервер</b>: другие «Нидерланды» или даже другую страну (например, <b>Германию</b> или <b>Финляндию</b>).</p>
+    <div class="note">Если VPN уже включён (кнопка горит зелёным), переподключение произойдёт само — ничего выключать не нужно.</div>
+    <p style="margin-top:14px">Всё равно не получается? Напишите или позвоните Вите.</p>
+  </section>
+
+  <footer>Инструкция для INCY · если что-то непонятно — спрашивайте, это нормально 🙂</footer>
+</main>
+</body>
+</html>
